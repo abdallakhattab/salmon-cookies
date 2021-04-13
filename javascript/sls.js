@@ -1,7 +1,7 @@
 'use strict';
-let totalarray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+let totalarray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 let arrayOfObjects = [];
-
+let fulldayarray = [0 , 0 , 0 , 0 , 0 ];
 
 function calculateSpi() {
   for (let i = 0; i < arrayOfObjects.length; i++) {
@@ -22,9 +22,16 @@ function renderfooter() {
     let tdEl2 = document.createElement('td');
     trEl2.appendChild(tdEl2);
     tdEl2.textContent = totalarray[i];
+  }
 }
-}
+// function fullday() {
+//   for (let i = 0; i < fulldayarray.length; i++) {
 
+//     for (let a = 0; a < hours.length; a++) {
+//       fulldayarray[i] += arrayOfObjects[i].cookieseveryhour[a];
+//     }
+//   }
+// }
 function randomValue(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -84,11 +91,14 @@ City.prototype.render = function () {
   let tdEl3 = document.createElement('td');
   trEl2.appendChild(tdEl3);
   tdEl3.textContent = this.location;
+  //let tdEl4 = document.createElement('td');
+  //trEl2.appendChild(tdEl4);
   for (let i = 0; i < 14; i++) {
     let tdEl2 = document.createElement('td');
     trEl2.appendChild(tdEl2);
-    tdEl2.textContent = this.cookieseveryhour[i];
+    tdEl2.textContent = this.cookieseveryhour[i] ;
   }
+// tdEl4.textContent = fulldayarray[0];
 };
 
 // City.prototype.data = function () {
@@ -136,3 +146,5 @@ lima.render();
 calculateSpi();
 console.log(totalarray);
 renderfooter();
+//fullday();
+console.log(fulldayarray);
