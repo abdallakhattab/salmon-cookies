@@ -127,10 +127,10 @@ lima.randomnum();
 lima.cookiesperhour();
 lima.render();
 calculateSpi();
-console.log(totalarray);
+//console.log(totalarray);
 megatot();
 renderfooter();
 // console.log(fulldayarray);
 // console.log(seattle.totalnu);
 
-console.log(megatotal);
+//console.log(megatotal);
