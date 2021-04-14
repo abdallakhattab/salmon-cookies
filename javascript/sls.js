@@ -65,10 +65,18 @@ function submitinfo(event) {
   event.preventDefault();
   console.log(event.target.city.value);
   let name = event.target.city.value;
-  let min = event.target.min.value;
-  let max = event.target.max.value;
-  let avg = event.target.avg.value;
+  let min = parseInt(event.target.min.value);
+  let max = parseInt(event.target.max.value);
+  let avg = parseInt(event.target.avg.value);
   let newcity = new City(name, min , max , avg);
+  table.removeChild(table.lastChild);
+  newcity.randomnum();
+  newcity.cookiesperhour();
+  newcity.render();
+  console.log(totalarray);
+  //calculateSpi();
+  renderfooter();
+  console.log(totalarray);
   console.log(newcity);
 }
 
@@ -148,3 +156,4 @@ renderfooter();
 // console.log(seattle.totalnu);
 
 //console.log(megatotal);
+console.log(arrayOfObjects);
