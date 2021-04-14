@@ -58,6 +58,20 @@ function tableheader() {
 
 }
 tableheader();
+// FORM ;
+let form = document.getElementById('form');
+form.addEventListener('submit', submitinfo);
+function submitinfo(event) {
+  event.preventDefault();
+  console.log(event.target.city.value);
+  let name = event.target.city.value;
+  let min = event.target.min.value;
+  let max = event.target.max.value;
+  let avg = event.target.avg.value;
+  let newcity = new City(name, min , max , avg);
+  console.log(newcity);
+}
+
 
 function City(location, min, max, avg) {
   this.location = location;
