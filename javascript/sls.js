@@ -58,6 +58,28 @@ function tableheader() {
 
 }
 tableheader();
+// FORM ;
+let form = document.getElementById('form');
+form.addEventListener('submit', submitinfo);
+function submitinfo(event) {
+  event.preventDefault();
+  console.log(event.target.city.value);
+  let name = event.target.city.value;
+  let min = parseInt(event.target.min.value);
+  let max = parseInt(event.target.max.value);
+  let avg = parseInt(event.target.avg.value);
+  let newcity = new City(name, min , max , avg);
+  table.removeChild(table.lastChild);
+  newcity.randomnum();
+  newcity.cookiesperhour();
+  newcity.render();
+  console.log(totalarray);
+  //calculateSpi();
+  renderfooter();
+  console.log(totalarray);
+  console.log(newcity);
+}
+
 
 function City(location, min, max, avg) {
   this.location = location;
@@ -134,3 +156,4 @@ renderfooter();
 // console.log(seattle.totalnu);
 
 //console.log(megatotal);
+console.log(arrayOfObjects);
