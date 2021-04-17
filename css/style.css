@@ -29,3 +29,28 @@ footer {
 
     background-color: cadetblue;
 }
+header nav ul li a { 
+
+    font-family: fantasy;
+    color: whitesmoke;
+}
+body main ul {
+font-family: cursive ;
+color: cadetblue;
+}
+footer ul {
+
+    color: whitesmoke;
+}
+footer ul li a {
+
+    text-decoration: none;
+    color: whitesmoke;
+};
+
+#cont table {
+
+    background-color: darkred;
+}
+
+
